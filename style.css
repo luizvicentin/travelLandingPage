@@ -12,13 +12,15 @@ body {
     background: #202024;
 }
 
-section {
+/*Header*/
+header {
     position: relative;
     padding: 100px;
 }
 
 .header {
-    position: absolute;    
+    position: absolute; 
+    overflow: hidden;   
     top: 0;
     left: 0;
     z-index: 10;
@@ -28,16 +30,38 @@ section {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-.header .logo {
-    color: #e6e3e3;
+/* Style the header links */
+.header a {
+    float: left;
+    text-align: center;
+    padding: 12px;
     text-decoration: none;
-    font-size: 1.2em;
+    color: #e6e3e3;
+    font-size: 1.2em;;
+    line-height: 25px;
+    border-radius: 4px;
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+/* Float the link section to the right */
+.header-right {
+    float: right;
 }
 
-.header .toggle img {
-    max-width: 40px;
-    cursor: pointer;
+/*End Header*/
+
+section {
+    position: relative;
+    padding: 100px;
 }
 
 .banner {
